@@ -266,7 +266,9 @@ void RefreshData::refresh_storages() {
 
   for (std::filesystem::directory_entry entry :
        std::filesystem::directory_iterator("/dev/disk/by-path/"))
-    devices.push_back(std::filesystem::read_symlink(entry).filename());
+    devices.push_back(std::filesystem::is_symlink(entry)
+                          ? std::filesystem::read_symlink(entry).filename()
+                          : entry);
 
   FILE* mounts = setmntent("/proc/mounts", "r");
   while (NULL != (ent = getmntent(mounts))) {
