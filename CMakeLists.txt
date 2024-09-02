@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 
 project(
     system-monitor
-    VERSION 0.1
+    VERSION 1.0
 )
 
 set(CMAKE_C_STANDARD               17)
