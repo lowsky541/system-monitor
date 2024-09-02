@@ -1,0 +1,9 @@
+---
+BasedOnStyle: LLVM
+IndentWidth: 2
+UseTab: Never
+---
+Language: Cpp
+DerivePointerAlignment: false
+PointerAlignment: Left
+NamespaceIndentation: All
