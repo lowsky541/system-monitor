@@ -13,8 +13,6 @@ find_package(OpenGL REQUIRED)
 find_package(SDL2 REQUIRED)
 find_package(Freetype REQUIRED)
 
-add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GL3W)
-
 set(IMGUI_SOURCES
     ${CMAKE_SOURCE_DIR}/src/imgui/imgui.cpp
     ${CMAKE_SOURCE_DIR}/src/imgui/imgui_tables.cpp
